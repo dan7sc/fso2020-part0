@@ -1,0 +1,18 @@
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over browser:
+javascript code executes an event handler
+(onsubmit) that creates a new note from
+input value and add this to the notes list
+rerendering the note list on the page
+and sending it to the server
+end note
+
+server->browser: { "message": "note created" }
+
+note over server:
+server receives data
+server stores the data in data.json
+server sends json-message
+and doesn't ask for a redirect
+end note
